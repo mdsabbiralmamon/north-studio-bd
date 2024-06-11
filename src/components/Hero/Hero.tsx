@@ -8,10 +8,11 @@ import sliderImage3 from '@/app/images/sliderImages/exterior1.jpg';
 import sliderImage4 from '@/app/images/sliderImages/interior1.jpg';
 
 import styles from './Hero.module.css';
+import { FaArrowRight } from 'react-icons/fa';
 
 export default function Hero() {
   const images = [sliderImage1, sliderImage2, sliderImage3, sliderImage4];
-  const texts = ['Interior', 'Exterior', 'Design', 'Building'];
+  const texts = ['Building', 'Design', 'Exterior', 'Interior'];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [animateText, setAnimateText] = useState(true);
@@ -21,7 +22,7 @@ export default function Hero() {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
       setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
       setAnimateText(true);
-    }, 3000); // Changed back to 8000ms for text change to sync with image
+    }, 3000);
 
     return () => {
       clearInterval(interval);
@@ -69,6 +70,8 @@ export default function Hero() {
                 <span className={styles.loadingDots}></span>
               </motion.p>
             </div>
+            <p className='text-white max-w-3xl my-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi earum tempora illo nostrum nisi delectus. Nesciunt quo minus mollitia, maxime facilis, non vero suscipit, consequuntur fuga itaque atque alias commodi?</p>
+            <button className=' text-white inline-flex justify-center items-center'>Learn More <FaArrowRight /></button>
           </div>
         </div>
       </div>
