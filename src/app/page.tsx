@@ -1,9 +1,14 @@
-import Image from "next/image";
+import Navbar from "@/components/Navbar/Navbar";
 
 export default function Home() {
   return (
-    <main className="">
-      <h2>head</h2>
-    </main>
+    <>
+      <header>
+        <Navbar />
+      </header>
+      <main>
+        <h2>home</h2>
+      </main>
+    </>
   );
 }
