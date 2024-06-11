@@ -1,35 +1,50 @@
-import React from 'react'
+"use client"
+
+import React, { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
+import logo from "@/app/images/main-square-logo.png";
+import Image from 'next/image';
 
 export default function Navbar() {
-    const navLink = <>
-        <li><a>Home</a></li>
-    </>
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            setIsScrolled(scrollTop > 0);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <div className="navbar bg-base-100">
+        <div className={`navbar fixed ${isScrolled ? 'glass' : 'transparent'}`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        {
-                            navLink
-                        }
+                        <li><a>Home</a></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">North Studio</a>
+                <div className='flex gap-2 justify-center items-center'>
+                    <Image className='h-10 w-10' src={logo} alt="north studio logo" />
+                    <p className='text-3xl font-extrabold text-northSecondaryBlack'>North <span className='text-northGray'>Studio</span></p>
+                </div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    {
-                        navLink
-                    }
+                    <li><a>Home</a></li>
                 </ul>
             </div>
             <div className="navbar-end">
                 <a className="btn">Login</a>
             </div>
         </div>
-    )
+    );
 }
