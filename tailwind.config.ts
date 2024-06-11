@@ -9,7 +9,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      
+      colors: {
+        'northBlack': '#131313',
+        'northSecondaryBlack': '#3A3B3D',
+        'northGray': '#BCBEC1',
+      },
     },
   },
   plugins: [daisyui],
