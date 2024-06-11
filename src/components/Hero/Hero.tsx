@@ -7,8 +7,15 @@ import sliderImage2 from '@/app/images/sliderImages/design1.jpg';
 import sliderImage3 from '@/app/images/sliderImages/exterior1.jpg';
 import sliderImage4 from '@/app/images/sliderImages/interior1.jpg';
 
+import sponsor1 from '@/app/images/sponsorSlider/sponsor1.png'
+import sponsor2 from '@/app/images/sponsorSlider/sponsor2.png'
+import sponsor3 from '@/app/images/sponsorSlider/sponsor3.png'
+import sponsor4 from '@/app/images/sponsorSlider/sponsor4.png'
+import sponsor5 from '@/app/images/sponsorSlider/sponsor5.png'
+
 import styles from './Hero.module.css';
 import { FaArrowRight } from 'react-icons/fa';
+import Marquee from 'react-fast-marquee';
 
 export default function Hero() {
   const images = [sliderImage1, sliderImage2, sliderImage3, sliderImage4];
@@ -36,7 +43,7 @@ export default function Hero() {
   }, [animateText]);
 
   return (
-    <div className="h-screen flex justify-center">
+    <div className="h-screen flex flex-col">
       <div className="relative w-full h-3/4 overflow-hidden">
         <AnimatePresence>
           {images.map((image, index) => (
@@ -74,6 +81,15 @@ export default function Hero() {
             <button className=' text-white inline-flex justify-center items-center'>Learn More <FaArrowRight /></button>
           </div>
         </div>
+      </div>
+      <div className='flex flex-grow items-center'>
+        <Marquee className='gap-8' autoFill={true}>
+          <Image  className='mx-8' src={sponsor1} alt='sponsor logo' />
+          <Image  className='mx-8'  src={sponsor2} alt='sponsor logo' />
+          <Image  className='mx-8' src={sponsor3} alt='sponsor logo' />
+          <Image  className='mx-8'  src={sponsor4} alt='sponsor logo' />
+          <Image  className='mx-8' src={sponsor5} alt='sponsor logo' />
+        </Marquee>
       </div>
     </div>
   );
