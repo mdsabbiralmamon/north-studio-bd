@@ -87,7 +87,7 @@ export default function AboutSection() {
                             custom={2}
                             variants={textVariants}
                         >
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id enim inventore tempore explicabo quisquam, est nam ratione, dolor accusantium recusandae fugit reiciendis vel rem temporibus ullam, voluptatum saepe placeat nobis.
+                            North Studio Limited, an Architectural consultancy based in Dhaka since 2017, offers a comprehensive range of services including Architectural Design with 3D Modeling and Animation services. We also provide Structural Design, Graphics Design, Renovation Work. The firm is situated at Mohakhali, Dhaka.
                         </motion.p>
                         <motion.button
                             className='inline-flex justify-center items-center gap-2 my-4 font-bold uppercase'

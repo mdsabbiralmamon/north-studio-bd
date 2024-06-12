@@ -76,7 +76,7 @@ export default function Hero() {
                 <span className={styles.loadingDots}></span>
               </motion.p>
             </div>
-            <p className='text-white max-w-3xl my-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi earum tempora.</p>
+            <p className='text-white max-w-3xl my-4'>We turn your imagination into work of art. Work with us for gaining excellence in every corners.</p>
             <button className=' text-white inline-flex justify-center items-center'>Learn More <FaArrowRight /></button>
           </div>
         </div>

@@ -82,7 +82,7 @@ export default function OurPurpose() {
             </motion.div>
             <motion.div ref={ref} initial="hidden" animate={controls}>
                 <motion.p custom={2} variants={textVariants}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio harum, maxime molestias cum aperiam labore incidunt, dicta eius non tempora earum unde eum voluptates repudiandae illo magni facilis officiis! Voluptatem.
+                At North Studio, we believe that every architectural project begins with a vision. Our mission is to transform that vision into reality, crafting spaces that are not only functional but also inspiring. Our team of experienced architects and designers work closely with clients to understand their unique needs and aspirations. Through a blend of innovative design, meticulous planning, and attention to detail, we create architectural masterpieces that stand the test of time. Whether it{"'"}s a residential home, a commercial building, or an urban development, North Studio is dedicated to turning your ideas into stunning works of art that enrich the environment and elevate the human experience.
                 </motion.p>
                 <div className='flex justify-between mt-8'>
                     <motion.div custom={3} variants={textVariants}>
