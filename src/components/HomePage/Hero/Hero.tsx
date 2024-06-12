@@ -61,7 +61,7 @@ export default function Hero() {
             )
           ))}
         </AnimatePresence>
-        <div className='relative bg-black w-full h-full bg-opacity-50'>
+        <div className='relative bg-black w-full h-full bg-opacity-50 pt-8'>
           <div className='container mx-auto relative top-1/2 -translate-y-1/2'>
             <h2 className='text-5xl font-extrabold text-white'>An Architect Firm</h2>
             <h3 className='text-5xl font-extrabold text-white mt-4'>Specializing In</h3>
@@ -77,7 +77,7 @@ export default function Hero() {
                 <span className={styles.loadingDots}></span>
               </motion.p>
             </div>
-            <p className='text-white max-w-3xl my-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi earum tempora illo nostrum nisi delectus. Nesciunt quo minus mollitia, maxime facilis, non vero suscipit, consequuntur fuga itaque atque alias commodi?</p>
+            <p className='text-white max-w-3xl my-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi earum tempora.</p>
             <button className=' text-white inline-flex justify-center items-center'>Learn More <FaArrowRight /></button>
           </div>
         </div>
