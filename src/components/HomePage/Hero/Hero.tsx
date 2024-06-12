@@ -7,11 +7,10 @@ import sliderImage2 from '@/app/images/sliderImages/design1.jpg';
 import sliderImage3 from '@/app/images/sliderImages/exterior1.jpg';
 import sliderImage4 from '@/app/images/sliderImages/interior1.jpg';
 
-import sponsor1 from '@/app/images/sponsorSlider/sponsor1.png'
-import sponsor2 from '@/app/images/sponsorSlider/sponsor2.png'
-import sponsor3 from '@/app/images/sponsorSlider/sponsor3.png'
-import sponsor4 from '@/app/images/sponsorSlider/sponsor4.png'
-import sponsor5 from '@/app/images/sponsorSlider/sponsor5.png'
+import sponsor1 from '@/app/images/sponsorSlider/arvex.png'
+import sponsor2 from '@/app/images/sponsorSlider/archive.png'
+import sponsor3 from '@/app/images/sponsorSlider/shampan.png'
+import sponsor4 from '@/app/images/sponsorSlider/bdnl.png'
 
 import styles from './Hero.module.css';
 import { FaArrowRight } from 'react-icons/fa';
@@ -83,12 +82,11 @@ export default function Hero() {
         </div>
       </div>
       <div className='flex flex-grow items-center'>
-        <Marquee className='gap-8' autoFill={true}>
-          <Image  className='mx-8' src={sponsor1} alt='sponsor logo' />
-          <Image  className='mx-8'  src={sponsor2} alt='sponsor logo' />
-          <Image  className='mx-8' src={sponsor3} alt='sponsor logo' />
-          <Image  className='mx-8'  src={sponsor4} alt='sponsor logo' />
-          <Image  className='mx-8' src={sponsor5} alt='sponsor logo' />
+        <Marquee  autoFill={true}>
+          <Image  className='mx-8' src={sponsor1} alt='sponsor logo' height={200} />
+          <Image  className='mr-32'  src={sponsor2} alt='sponsor logo' height={100} />
+          <Image  className='mr-32' src={sponsor3} alt='sponsor logo' height={100} />
+          <Image  className=''  src={sponsor4} alt='sponsor logo' height={150} />
         </Marquee>
       </div>
     </div>
