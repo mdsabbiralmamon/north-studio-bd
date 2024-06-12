@@ -1,13 +1,58 @@
+'use client';
+
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect } from 'react';
 import aboutImage from '@/app/images/homepage/aboutUS.jpg';
 import styles from './AboutSection.module.css';
 import { BsCaretRight } from 'react-icons/bs';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
+const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i: number) => ({
+        opacity: 1,
+        y: 0,
+        transition: { delay: i * 0.3, duration: 0.6 }
+    })
+};
+
+const buttonVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: { delay: 1.2, duration: 0.6 }
+    }
+};
+
+const iconVariants = {
+    hover: { x: 5, scale: 1.1, transition: { type: 'spring', stiffness: 300 } }
+};
 
 export default function AboutSection() {
+    const controls = useAnimation();
+    const { ref, inView } = useInView({
+        threshold: 0.1,
+    });
+
+    useEffect(() => {
+        if (inView) {
+            controls.start('visible');
+        } else {
+            controls.start('hidden');
+        }
+    }, [controls, inView]);
+
     return (
         <div className='grid gap-8 grid-cols-1 lg:grid-cols-2'>
-            <div className="relative flex justify-center">
+            <motion.div
+                ref={ref}
+                className="relative flex justify-center"
+                initial={{ y: 50, opacity: 0 }}
+                animate={inView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
+                transition={{ duration: 0.8 }}
+            >
                 <div className='w-fit lg:p-8'>
                     <div className='relative w-[280px] md:w-[500px]'>
                         <Image src={aboutImage} alt='about us image' />
@@ -19,17 +64,47 @@ export default function AboutSection() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
             <div>
                 <div className='flex justify-center items-center h-full p-8'>
-                    <div>
-                        <h3 className={`${styles.aboutTextTitle} relative inline-block pb-2 text-xl mb-8 uppercase font-bold`}>About Studio</h3>
-                        <h2 className='uppercase text-5xl font-extrabold mb-8'>Great Experience</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id enim inventore tempore explicabo quisquam, est nam ratione, dolor accusantium recusandae fugit reiciendis vel rem temporibus ullam, voluptatum saepe placeat nobis.</p>
-                        <button className='inline-flex justify-center items-center gap-2 my-4 font-bold uppercase'>Watch Video <span className='bg-black p-2'><BsCaretRight className='text-white font-bold text-xl'/></span></button>
-                    </div>
+                    <motion.div initial="hidden" animate={controls}>
+                        <motion.h3
+                            className={`${styles.aboutTextTitle} relative inline-block pb-2 text-xl mb-8 uppercase font-bold`}
+                            custom={0}
+                            variants={textVariants}
+                        >
+                            About Studio
+                        </motion.h3>
+                        <motion.h2
+                            className='uppercase text-5xl font-extrabold mb-8'
+                            custom={1}
+                            variants={textVariants}
+                        >
+                            Great Experience
+                        </motion.h2>
+                        <motion.p
+                            className='mb-8'
+                            custom={2}
+                            variants={textVariants}
+                        >
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id enim inventore tempore explicabo quisquam, est nam ratione, dolor accusantium recusandae fugit reiciendis vel rem temporibus ullam, voluptatum saepe placeat nobis.
+                        </motion.p>
+                        <motion.button
+                            className='inline-flex justify-center items-center gap-2 my-4 font-bold uppercase'
+                            variants={buttonVariants}
+                        >
+                            Watch Video 
+                            <motion.span
+                                className='bg-black p-2'
+                                variants={iconVariants}
+                                whileHover="hover"
+                            >
+                                <BsCaretRight className='text-white font-bold text-xl' />
+                            </motion.span>
+                        </motion.button>
+                    </motion.div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
