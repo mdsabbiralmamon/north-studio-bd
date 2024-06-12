@@ -57,7 +57,7 @@ export default function AboutSection() {
                     <div className='relative w-[280px] md:w-[500px]'>
                         <Image src={aboutImage} alt='about us image' />
                         <div className={`${styles.photoBadge} absolute bottom-0 right-0 bg-white p-4 lg:p-16 font-semibold text-right uppercase`}>
-                            <h2 className='text-7xl font-extrabold'>17</h2>
+                            <h2 className='text-7xl font-extrabold'>07</h2>
                             <h3>Years Of </h3>
                             <h3>Successful</h3>
                             <h3>Work</h3>
