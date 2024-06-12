@@ -9,7 +9,7 @@ export default function AboutSection() {
         <div className='grid gap-8 grid-cols-1 lg:grid-cols-2'>
             <div className="relative flex justify-center">
                 <div className='w-fit lg:p-8'>
-                    <div className='relative w-[280px] md:w-[700px]'>
+                    <div className='relative w-[280px] md:w-[500px]'>
                         <Image src={aboutImage} alt='about us image' />
                         <div className={`${styles.photoBadge} absolute bottom-0 right-0 bg-white p-4 lg:p-16 font-semibold text-right uppercase`}>
                             <h2 className='text-7xl font-extrabold'>17</h2>
