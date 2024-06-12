@@ -1,0 +1,33 @@
+.photoBadge::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -35px;
+  right: -40px;
+  z-index: -1;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #cccccc,
+    #cccccc 2.5px,
+    transparent 2.5px,
+    transparent 5px
+  );
+}
+
+.aboutTextTitle::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    z-index: -1;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      #cccccc,
+      #cccccc 2.5px,
+      transparent 2.5px,
+      transparent 5px
+    );
+  }
