@@ -23,7 +23,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <div className={`navbar fixed ${isScrolled ? 'bg-white' : 'transparent border-b'} z-10`}>
+        <div className={`navbar fixed ${isScrolled ? 'bg-white border-b border-b-gray-300' : 'transparent border-b'} z-10`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

@@ -26,7 +26,7 @@ export default function AboutSection() {
                         <h3 className={`${styles.aboutTextTitle} relative inline-block pb-2 text-xl mb-8 uppercase font-bold`}>About Studio</h3>
                         <h2 className='uppercase text-5xl font-extrabold mb-8'>Great Experience</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id enim inventore tempore explicabo quisquam, est nam ratione, dolor accusantium recusandae fugit reiciendis vel rem temporibus ullam, voluptatum saepe placeat nobis.</p>
-                        <button className='inline-flex justify-center items-center gap-2 my-4'>Watch Video <span className='bg-black p-2'><BsCaretRight className='text-white font-bold text-xl'/></span></button>
+                        <button className='inline-flex justify-center items-center gap-2 my-4 font-bold uppercase'>Watch Video <span className='bg-black p-2'><BsCaretRight className='text-white font-bold text-xl'/></span></button>
                     </div>
                 </div>
             </div>
