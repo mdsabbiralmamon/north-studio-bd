@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
 import logo from "@/app/images/main-square-logo.png";
+import logoWhite from "@/app/images/main-square-logo-white.png";
 import Image from 'next/image';
 
 export default function Navbar() {
@@ -22,7 +23,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <div className={`navbar fixed ${isScrolled ? 'glass' : 'transparent'} z-10`}>
+        <div className={`navbar fixed ${isScrolled ? 'glass' : 'transparent border-b'} z-10`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -33,8 +34,10 @@ export default function Navbar() {
                     </ul>
                 </div>
                 <div className='flex gap-2 justify-center items-center'>
-                    <Image className='h-10 w-10' src={logo} alt="north studio logo" />
-                    <p className='text-3xl font-extrabold text-northSecondaryBlack'>North <span className='text-northGray'>Studio</span></p>
+                    {
+                        isScrolled ? <Image className='h-10 w-10' src={logo} alt="north studio logo" /> : <Image className='h-10 w-10' src={logoWhite} alt="north studio logo" />
+                    }
+                    <p className={`text-3xl font-extrabold ${isScrolled ? 'text-northSecondaryBlack' : 'text-white'}`}>North Studio </p>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
