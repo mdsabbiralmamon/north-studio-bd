@@ -9,17 +9,17 @@ const textVariants = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.3, duration: 0.6 }
+    transition: { delay: i * 0.3 + 0.3, duration: 0.3 }
   })
 };
 
 const lineVariants = {
-  hidden: { opacity: 0, width: 0 },
-  visible: (i: number) => ({
-    opacity: 1,
-    width: '25%',
-    transition: { delay: i * 0.3 + 0.2, duration: 0.6 }
-  })
+    hidden: { opacity: 0, scaleX: 0 },
+    visible: (i: number) => ({
+      opacity: 1,
+      scaleX: 1,
+      transition: { delay: i * 0.3, duration: 0.3, ease: "easeInOut" }
+    })
 };
 
 const svgVariants = {
@@ -27,7 +27,7 @@ const svgVariants = {
   visible: (i: number) => ({
     opacity: 1,
     scale: 1,
-    transition: { delay: i * 0.3 + 0.4, duration: 0.6 }
+    transition: { delay: i * 0.3 + 0.3, duration: 0.3 }
   })
 };
 
@@ -100,13 +100,14 @@ export default function OurAdvantageSection() {
           ].map((item, index) => (
             <li key={index}>
               <motion.hr 
-                className="bg-black"
-                custom={index}
+                className="bg-black h-1"
+                custom={index * 2}
                 variants={lineVariants}
+                style={{ height: 0 }} // Initial height should be 0
               />
               <motion.div 
                 className={`timeline-${index % 2 === 0 ? 'start' : 'end'} timeline-box rounded-md`}
-                custom={index + 3}
+                custom={index * 2 + 1}
                 variants={textVariants}
               >
                 <h2 className='font-bold text-xl border-b border-b-gray-300 w-full py-2'>{item.title}</h2>
@@ -114,7 +115,7 @@ export default function OurAdvantageSection() {
               </motion.div>
               <motion.div 
                 className="timeline-middle"
-                custom={index}
+                custom={index * 2 + 1}
                 variants={svgVariants}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="black" className="w-5 h-5 text-primary">
@@ -122,9 +123,12 @@ export default function OurAdvantageSection() {
                 </svg>
               </motion.div>
               <motion.hr 
-                className="bg-black"
-                custom={index}
+                className="bg-black h-1"
+                custom={index * 2 + 2}
                 variants={lineVariants}
+                initial="hidden"
+                animate={controls}
+                style={{ transformOrigin: 'left' }}
               />
             </li>
           ))}
