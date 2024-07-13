@@ -103,7 +103,9 @@ export default function OurAdvantageSection() {
                 className="bg-black h-1"
                 custom={index * 2}
                 variants={lineVariants}
-                style={{ height: 0 }} // Initial height should be 0
+                initial="hidden"
+                animate={controls}
+                style={{ transformOrigin: 'left' }}
               />
               <motion.div 
                 className={`timeline-${index % 2 === 0 ? 'start' : 'end'} timeline-box rounded-md`}
