@@ -81,8 +81,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className='flex flex-grow items-center'>
-        <Marquee  autoFill={true}>
+      <div className='flex flex-grow items-center cursor-pointer'>
+        <Marquee  autoFill={true} pauseOnHover={true}>
           <Image  className='mx-8' src={sponsor1} alt='sponsor logo' height={200} />
           <Image  className='mr-32'  src={sponsor2} alt='sponsor logo' height={100} />
           <Image  className='mr-32' src={sponsor3} alt='sponsor logo' height={100} />
