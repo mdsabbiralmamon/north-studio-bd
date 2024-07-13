@@ -23,12 +23,12 @@ export default function Navbar() {
     }, []);
 
     const navLinks = <>
-        <li><a>Home</a></li>
+        <li><a href='/'>Home</a></li>
         <li><a>Architectural</a></li>
         <li><a>Portfolio</a></li>
         <li><a>About</a></li>
         <li><a>Services</a></li>
-        <li><a>Arvex</a></li>
+        <li><a href='/arvex'>Arvex</a></li>
     </>
 
     return (
