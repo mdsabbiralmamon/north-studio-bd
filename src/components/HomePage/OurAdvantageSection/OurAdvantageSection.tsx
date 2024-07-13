@@ -9,7 +9,7 @@ const textVariants = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.3 + 0.3, duration: 0.3 }
+    transition: { delay: i * 0.45 + 0.45, duration: 0.45 }
   })
 };
 
@@ -18,7 +18,7 @@ const lineVariants = {
     visible: (i: number) => ({
       opacity: 1,
       scaleX: 1,
-      transition: { delay: i * 0.3, duration: 0.3, ease: "easeInOut" }
+      transition: { delay: i * 0.45, duration: 0.45, ease: "easeInOut" }
     })
 };
 
@@ -27,7 +27,7 @@ const svgVariants = {
   visible: (i: number) => ({
     opacity: 1,
     scale: 1,
-    transition: { delay: i * 0.3 + 0.3, duration: 0.3 }
+    transition: { delay: i * 0.45 + 0.45, duration: 0.45 }
   })
 };
 
