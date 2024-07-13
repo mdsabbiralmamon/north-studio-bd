@@ -28,10 +28,11 @@ export default function Navbar() {
         <li><a>Portfolio</a></li>
         <li><a>About</a></li>
         <li><a>Services</a></li>
+        <li><a>Arvex</a></li>
     </>
 
     return (
-        <div className={`navbar fixed ${isScrolled ? 'bg-white border-b border-b-gray-300' : 'transparent border-b'} z-10`}>
+        <div className={`navbar fixed ${isScrolled ? 'bg-white border-b border-b-gray-300' : 'transparent border-b text-white'} z-10`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
