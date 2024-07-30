@@ -1,6 +1,7 @@
 import Banner from '@/components/Shared/Banner/Banner'
 import React from 'react'
 import bannerImg from '@/app/images/sliderImages/interior1.jpg'
+import TeamCard from '@/components/Shared/TeamCard/TeamCard'
 
 export default function page() {
     return (
@@ -12,7 +13,7 @@ export default function page() {
                     <p className='text-base font-normal lowercase first-letter:uppercase max-w-2xl mx-auto my-4'>We are a team of Architects, Planners, Creatives and forward-thinking individuals.</p>
                 </div>
                 <div className='my-24'>
-                    
+                    <TeamCard name={'Rifat Ul Zaka Rakib'} image={'https://northstudiobd.com/wp-content/uploads/2023/06/RIFAT.jpg'} facebook={''} instagram={''} twitter={''} youtube={''} />
                 </div>
             </div>
         </div>
