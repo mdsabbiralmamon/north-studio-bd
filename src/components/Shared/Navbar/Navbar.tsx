@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
-import logo from "@/app/images/main-square-logo.png";
-import logoWhite from "@/app/images/main-square-logo-white.png";
+import logo from "@/app/images/logo.png";
+import logoWhite from "@/app/images/logo-white.png";
 import Image from 'next/image';
 
 export default function Navbar() {
@@ -38,7 +38,7 @@ export default function Navbar() {
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black">
                         {
                             navLinks
                         }
