@@ -23,28 +23,28 @@ const TeamCard: React.FC<TeamCardProps> = ({ name, image, facebook, instagram, t
                         {facebook && (
                             <li>
                                 <a href={facebook} target="_blank" rel="noopener noreferrer">
-                                    <FaFacebook />
+                                    <FaFacebook className='text-3xl inline-flex justify-center items-center' />
                                 </a>
                             </li>
                         )}
                         {instagram && (
                             <li>
                                 <a href={instagram} target="_blank" rel="noopener noreferrer">
-                                    <FaInstagram />
+                                    <FaInstagram className='text-3xl inline-flex justify-center items-center' />
                                 </a>
                             </li>
                         )}
                         {twitter && (
                             <li>
                                 <a href={twitter} target="_blank" rel="noopener noreferrer">
-                                    <FaTwitter />
+                                    <FaTwitter className='text-3xl inline-flex justify-center items-center' />
                                 </a>
                             </li>
                         )}
                         {youtube && (
                             <li>
                                 <a href={youtube} target="_blank" rel="noopener noreferrer">
-                                    <FaYoutube />
+                                    <FaYoutube className='text-3xl inline-flex justify-center items-center' />
                                 </a>
                             </li>
                         )}
