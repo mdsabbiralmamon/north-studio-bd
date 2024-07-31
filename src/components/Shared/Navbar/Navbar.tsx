@@ -28,7 +28,7 @@ export default function Navbar() {
         <li><a>Portfolio</a></li>
         <li><a>About</a></li>
         <li><a>Services</a></li>
-        <li><a href='/arvex'>Arvex</a></li>
+        <li><a href='/our-team'>Our Team</a></li>
     </>
 
     return (
