@@ -2,7 +2,7 @@
 .img-wrapper
 {
 	width: 300px;
-	height: 400px;
+	height: 300px;
 	position: relative;
 	overflow: hidden;
 }
@@ -28,7 +28,7 @@
 
 .img-wrapper img
 {
-	height: 400px;
+	height: 300px;
 	width: 300px;
 	filter: grayscale(100%);
 	transition: 2s;
