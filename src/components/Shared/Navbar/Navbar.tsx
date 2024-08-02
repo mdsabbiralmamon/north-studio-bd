@@ -24,10 +24,10 @@ export default function Navbar() {
 
     const navLinks = <>
         <li><a href='/'>Home</a></li>
-        <li><a>Architectural</a></li>
-        <li><a>Portfolio</a></li>
-        <li><a>About</a></li>
+        <li><a href='/about'>About</a></li>
         <li><a>Services</a></li>
+        <li><a>Portfolio</a></li>
+        <li><a>Contact</a></li>
         <li><a href='/our-team'>Our Team</a></li>
     </>
 
