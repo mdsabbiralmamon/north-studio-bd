@@ -73,7 +73,7 @@ const page = () => {
                             <textarea
                                 placeholder="Enter your main text here..."
                                 className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#bf1e2e] focus:border-[#bf1e2e]"
-                                rows="4"
+                                rows={4}
                             ></textarea>
                             <p className="text-sm text-gray-500 text-right mt-1">300/300</p>
                         </div>
