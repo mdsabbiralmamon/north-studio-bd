@@ -1,0 +1,33 @@
+/* src/Parallax.css */
+.parallax-container {
+    position: relative;
+    min-height: 40vh;
+    max-height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .parallax-background {
+    height: 150%;
+    width: 100%;
+    position: absolute;
+    top: -25%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: -1;
+  }
+  
+  .parallax-content {
+    position: relative;
+    z-index: 1;
+    padding: 50px;
+    color: white;
+    text-align: center;
+  }
+  
