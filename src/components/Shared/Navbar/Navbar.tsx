@@ -48,7 +48,7 @@ export default function Navbar() {
                     {
                         isScrolled ? <Image className='h-10 w-10' src={logo} alt="north studio logo" /> : <Image className='h-10 w-10' src={logoWhite} alt="north studio logo" />
                     }
-                    <p className={`text-3xl font-extrabold ${isScrolled ? 'text-northSecondaryBlack' : 'text-white'}`}>North Studio </p>
+                    <p className={`text-3xl font-extrabold text-nowrap ${isScrolled ? 'text-northSecondaryBlack' : 'text-white'}`}>North Studio </p>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
