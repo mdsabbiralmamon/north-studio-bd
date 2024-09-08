@@ -32,7 +32,7 @@ export default function ServicesSection() {
   }, [controls, inView]);
 
   return (
-    <div>
+    <div className='p-8'>
       <motion.div
         className="text-center text-xl font-bold uppercase"
         ref={ref}
