@@ -46,7 +46,7 @@ export default function OurPurpose() {
     }, [controls, inView]);
 
     return (
-        <div className='grid gap-8 grid-cols-1 lg:grid-cols-2'>
+        <div className='grid p-8 gap-8 grid-cols-1 lg:grid-cols-2'>
             <motion.div
                 ref={ref}
                 initial="hidden"
@@ -84,7 +84,7 @@ export default function OurPurpose() {
                 <motion.p custom={2} variants={textVariants}>
                 At North Studio, we believe that every architectural project begins with a vision. Our mission is to transform that vision into reality, crafting spaces that are not only functional but also inspiring. Our team of experienced architects and designers work closely with clients to understand their unique needs and aspirations. Through a blend of innovative design, meticulous planning, and attention to detail, we create architectural masterpieces that stand the test of time. Whether it{"'"}s a residential home, a commercial building, or an urban development, North Studio is dedicated to turning your ideas into stunning works of art that enrich the environment and elevate the human experience.
                 </motion.p>
-                <div className='flex justify-between mt-8'>
+                <div className='flex flex-col md:flex-row justify-between mt-8'>
                     <motion.div custom={3} variants={textVariants}>
                         <div className='bg-black p-2 w-fit'>
                             <LuPencil className='text-white font-bold text-xl' />
