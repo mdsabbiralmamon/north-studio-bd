@@ -1,17 +1,26 @@
 "use client"
 
 import React, { useState, useEffect } from 'react';
-import styles from './Navbar.module.css';
 import logo from "@/app/images/logo.png";
 import logoWhite from "@/app/images/logo-white.png";
 import Image from 'next/image';
+import './Navbar.css';
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollTop, setLastScrollTop] = useState(0);
 
     useEffect(() => {
         const handleScroll = () => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop && lastScrollTop < 500) {
+                setIsVisible(false);
+            }
+            else {
+                setIsVisible(true);
+            }
+            setLastScrollTop(scrollTop);
             setIsScrolled(scrollTop > 0);
         };
 
@@ -20,7 +29,7 @@ export default function Navbar() {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [lastScrollTop]);
 
     const navLinks = <>
         <li><a href='/'>Home</a></li>
@@ -32,7 +41,7 @@ export default function Navbar() {
     </>
 
     return (
-        <div className={`navbar fixed ${isScrolled ? 'bg-white border-b border-b-gray-300' : 'transparent border-b text-white'} z-10`}>
+        <div className={`navbar z-10 shadow-lg ${isScrolled ? 'navbar-fixed bg-white' : 'fixed top-0 text-white'} ${!isVisible ? 'navbar-hidden' : ''}`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -59,7 +68,7 @@ export default function Navbar() {
                 </ul>
             </div>
             <div className="navbar-end">
-                
+
             </div>
         </div>
     );
