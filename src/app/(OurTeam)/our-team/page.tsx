@@ -22,7 +22,7 @@ export default function page() {
                 <div className='my-24'>
                     <h2 className='customTextBorder p-2 text-3xl font-bold mb-12'>Managing Partners:</h2>
                     <div className='grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-fit mx-auto'>
-                        <TeamCard name={'Rifat Ul Zaka Rakib(CEO)'} image={rifat.src} facebook={'#'} instagram={'#'} twitter={'#'} youtube={'#'} />
+                        <TeamCard name={'Rifat Ul Zaka Rakib'} image={rifat.src} facebook={'#'} instagram={'#'} twitter={'#'} youtube={'#'} />
                         <TeamCard name={'Arafat Hossain'} image={arafat.src} facebook={'#'} instagram={'#'} twitter={'#'} youtube={'#'} />
                         <TeamCard name={'Najmus Sakib Pranto'} image={pranto.src} facebook={'#'} instagram={'#'} twitter={'#'} youtube={'#'} />
                     </div>
