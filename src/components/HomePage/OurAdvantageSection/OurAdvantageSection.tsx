@@ -46,7 +46,7 @@ export default function OurAdvantageSection() {
   }, [controls, inView]);
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className='p-8'>
       <motion.div 
         className='text-center text-xl font-bold uppercase'
         initial="hidden"
