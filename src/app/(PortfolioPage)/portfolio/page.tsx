@@ -11,17 +11,19 @@ const page = () => {
                 <p className='max-w-xl mx-auto my-24 text-center'>Our Projects harness design and technology to create places where
                     people live, work, and heal.</p>
 
-                <div className="container mx-auto p-4">
+                <div className="container mx-auto">
                     {/* <!-- Filter Buttons --> */}
-                    <div className="flex justify-center space-x-4 mb-8">
+                    <div className="flex items-center justify-center space-x-4 mb-12">
+                        <div className='customLine'></div>
                         <button className="text-gray-500 hover:text-gray-900 focus:text-gray-900 border-b-2 border-transparent focus:border-green-500">All</button>
-                        <button className="text-gray-500 hover:text-gray-900 focus:text-gray-900 border-b-2 border-transparent focus:border-green-500">Sustainable</button>
+                        <button className="text-gray-500 hover:text-gray-900 focus:text-gray-900 border-b-2 border-transparent focus:border-green-500">Exterior</button>
                         <button className="text-gray-500 hover:text-gray-900 focus:text-gray-900 border-b-2 border-transparent focus:border-green-500">Interior</button>
                         <button className="text-gray-500 hover:text-gray-900 focus:text-gray-900 border-b-2 border-transparent focus:border-green-500">Architecture</button>
+                        <div className='customLine'></div>
                     </div>
 
                     {/* <!-- Grid of Projects --> */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-24">
                         {/* <!-- Example Project Item --> */}
                         <div className="relative group">
                             <img src={bannerImg.src} alt="Project Image" className="w-full h-auto" />
