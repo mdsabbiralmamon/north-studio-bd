@@ -28,6 +28,7 @@ export default function page() {
                     </div>
                     <h2 className='customTextBorder p-2 text-3xl font-bold mt-24 mb-12'>Core Members:</h2>
                     <div className='grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-fit mx-auto'>
+                        <TeamCard name={'Sadia Islam Mumu'} image={defaultFemale.src} facebook={''} instagram={''} twitter={''} youtube={''} />
                         <TeamCard name={'Rithim Noor'} image={defaultMale.src} facebook={''} instagram={''} twitter={''} youtube={''} />
                         <TeamCard name={'Rabaya Taposhi Irany'} image={defaultFemale.src} facebook={''} instagram={''} twitter={''} youtube={''} />
                         <TeamCard name={'Sadin Jerin Anamika'} image={defaultFemale.src} facebook={''} instagram={''} twitter={''} youtube={''} />
