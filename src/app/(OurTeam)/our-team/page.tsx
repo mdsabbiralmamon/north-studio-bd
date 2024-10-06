@@ -6,9 +6,9 @@ import TeamCard from '@/components/Shared/TeamCard/TeamCard'
 // team images
 import defaultFemale from '@/app/images/team/default-female.jpg';
 import defaultMale from '@/app/images/team//deafault-male.png';
-import rifat from '@/app/images/team/RIFAT.jpg';
-import arafat from '@/app/images/team/Arafat.jpg';
-import pranto from '@/app/images/team/PRANTO-2.jpg';
+// import rifat from '@/app/images/team/RIFAT.jpg';
+// import arafat from '@/app/images/team/Arafat.jpg';
+// import pranto from '@/app/images/team/PRANTO-2.jpg';
 
 export default function page() {
     return (
@@ -22,20 +22,20 @@ export default function page() {
                 <div className='my-24'>
                     <h2 className='customTextBorder p-2 text-3xl font-bold mb-12'>Managing Partners:</h2>
                     <div className='grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-fit mx-auto'>
-                        <TeamCard name={'Rifat Ul Zaka Rakib'} image={rifat.src} facebook={'#'} instagram={'#'} twitter={'#'} youtube={'#'} />
-                        <TeamCard name={'Arafat Hossain'} image={arafat.src} facebook={'#'} instagram={'#'} twitter={'#'} youtube={'#'} />
-                        <TeamCard name={'Najmus Sakib Pranto'} image={pranto.src} facebook={'#'} instagram={'#'} twitter={'#'} youtube={'#'} />
+                        <TeamCard name={'Rifat Ul Zaka Rakib'} image={defaultMale.src} facebook={'#'} instagram={'#'} twitter={'#'} youtube={'#'} />
+                        <TeamCard name={'Arafat Hossain'} image={defaultMale.src} facebook={'#'} instagram={'#'} twitter={'#'} youtube={'#'} />
+                        <TeamCard name={'Najmus Sakib Pranto'} image={defaultMale.src} facebook={'#'} instagram={'#'} twitter={'#'} youtube={'#'} />
                     </div>
                     <h2 className='customTextBorder p-2 text-3xl font-bold mt-24 mb-12'>Core Members:</h2>
                     <div className='grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-fit mx-auto'>
                         <TeamCard name={'Rithim Noor'} image={defaultMale.src} facebook={''} instagram={''} twitter={''} youtube={''} />
-                        <TeamCard name={'Orny Sumaiya'} image={defaultFemale.src} facebook={''} instagram={''} twitter={''} youtube={''} />
                         <TeamCard name={'Rabaya Taposhi Irany'} image={defaultFemale.src} facebook={''} instagram={''} twitter={''} youtube={''} />
                         <TeamCard name={'Sadin Jerin Anamika'} image={defaultFemale.src} facebook={''} instagram={''} twitter={''} youtube={''} />
                     </div>
                     <h2 className='customTextBorder p-2 text-3xl font-bold mt-24 mb-12'>Away but always our family member:</h2>
                     <div className='grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-fit mx-auto'>
-                        <TeamCard name={'Fahmida Marium'} image={defaultMale.src} facebook={''} instagram={''} twitter={''} youtube={''} />
+                        <TeamCard name={'Orny Sumaiya'} image={defaultFemale.src} facebook={''} instagram={''} twitter={''} youtube={''} />
+                        <TeamCard name={'Fahmida Marium'} image={defaultFemale.src} facebook={''} instagram={''} twitter={''} youtube={''} />
                         <TeamCard name={'Md. Shourov'} image={defaultMale.src} facebook={''} instagram={''} twitter={''} youtube={''} />
                         <TeamCard name={'Tahrafi Sakib Faisal'} image={defaultMale.src} facebook={''} instagram={''} twitter={''} youtube={''} />
                     </div>
