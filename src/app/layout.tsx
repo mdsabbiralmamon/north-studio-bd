@@ -7,8 +7,23 @@ import Footer from "@/components/Shared/Footer/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "North Studio",
-  description: "Architect Firm",
+  title: "North Studio | Architect Firm",
+  description: "North Studio is a leading architectural firm offering innovative design solutions for residential, commercial, and public spaces.",
+  keywords: "architect, interior design, architecture firm, design, North Studio, residential design, commercial design, building solutions, architectural services",
+  authors: [{ name: "North Studio", url: "https://northstudiobd.com" }],
+  openGraph: {
+    title: "North Studio | Architect Firm",
+    description: "Innovative architectural design solutions by North Studio for your residential, commercial, and public spaces.",
+    url: "https://northstudiobd.com",
+    images: [
+      {
+        url: "https://northstudiobd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.7a427b5f.png&w=1080&q=75",
+        width: 1080,
+        height: 1080,
+        alt: "North Studio Architect Logo",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
