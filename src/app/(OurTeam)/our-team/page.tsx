@@ -17,10 +17,10 @@ export default function page() {
             <div className='container mx-auto '>
                 <div className='my-24 text-center'>
                     <h2 className='customTextBorder p-2 text-5xl font-bold'>Meet Our Team</h2>
-                    <p className='text-base font-normal lowercase first-letter:uppercase max-w-2xl mx-auto my-4'>We are a team of Architects, Planners, Creatives and forward-thinking individuals.</p>
+                    <p className='text-base font-normal max-w-2xl mx-auto my-4'>We are a team of Architects, Planners, Creatives and Forward-thinking individuals.</p>
                 </div>
                 <div className='my-24'>
-                    <h2 className='customTextBorder p-2 text-3xl font-bold mb-12'>Managing Partners:</h2>
+                    <h2 className='customTextBorder p-2 text-3xl font-bold mb-12'>Partners:</h2>
                     <div className='grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-fit mx-auto'>
                         <TeamCard name={'Rifat Ul Zaka Rakib'} image={defaultMale.src} facebook={'#'} instagram={'#'} twitter={'#'} youtube={'#'} />
                         <TeamCard name={'Arafat Hossain'} image={defaultMale.src} facebook={'#'} instagram={'#'} twitter={'#'} youtube={'#'} />
