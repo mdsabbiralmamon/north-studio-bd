@@ -1,6 +1,8 @@
 import React from 'react';
 import bannerImg from '@/app/images/sliderImages/design1.jpg';
 import Banner from '@/components/Shared/Banner/Banner';
+import placeholderImage from '@/app/images/sliderImages/design1.jpg';
+import Image from 'next/image';
 
 const page = () => {
     return (
@@ -11,10 +13,12 @@ const page = () => {
                 
                 {/* Left Side: Image */}
                 <div className="relative hidden md:block">
-                    <img
-                        src="https://via.placeholder.com/600x800"
+                    <Image
+                        src={placeholderImage.src}
                         alt="Building"
                         className="object-cover h-full w-full rounded-lg"
+                        width={600}
+                        height={800}
                     />
                     <button className="absolute bottom-10 left-10 bg-white text-gray-800 py-2 px-6 rounded-full shadow-lg">
                         Reach Out To Us
@@ -27,7 +31,7 @@ const page = () => {
                         Let’s Get In Touch.
                     </h2>
                     <p className="text-gray-600 mb-8">
-                        Or just reach out manually to <a href="mailto:hello@slothui.com" className="text-[#bf1e2e]">hello@slothui.com</a>.
+                        Or just reach out manually to <a href="mailto:hr@northstudiobd.com" className="text-[#bf1e2e]">hr@northstudiobd.com</a>.
                     </p>
 
                     <form action="#" className="space-y-6">
