@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import logo from '@/app/images/logo.png';
+import logo from '@/app/images/logo-full.png';
 import { FaFacebookF, FaTwitter, FaInstagram, FaGooglePlusG } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
@@ -11,8 +11,8 @@ const Footer: React.FC = () => {
                     {/* Logo and Description */}
                     <div>
                         <div className='flex justify-start items-center'>
-                            <Image src={logo.src} alt="North Studio Logo" width={50} height={50} />
-                            <h2 className="text-3xl font-extrabold text-nowrap text-northSecondaryBlack">North Studio </h2>
+                            <Image src={logo.src} alt="North Studio Logo" width={240} height={160} />
+                            {/* <h2 className="text-3xl font-extrabold text-nowrap text-northSecondaryBlack">North Studio </h2> */}
                         </div>
                         <p className='my-4'>
                             Explore and connect with the beauty of architectural design and innovation at North Studio. Let us bring your vision to life with creativity and precision.
@@ -50,10 +50,9 @@ const Footer: React.FC = () => {
                     <div>
                         <h3 className="font-bold text-lg text-[#bf1e2e] mb-4">Useful Links</h3>
                         <ul className="space-y-2 ">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Get a Quote</a></li>
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/services">Services</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
                         </ul>
                     </div>
 
@@ -77,7 +76,7 @@ const Footer: React.FC = () => {
 
                 {/* Copyright */}
                 <div className="text-center mt-8 text-gray-500">
-                    © 2021 North Studio. All rights reserved.
+                    © 2023-24 North Studio. All rights reserved.
                 </div>
             </div>
         </footer>
