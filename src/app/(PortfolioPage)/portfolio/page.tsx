@@ -112,7 +112,7 @@ const Page = () => {
               Interior
             </button>
             <button className="text-gray-500 hover:text-gray-900 focus:text-gray-900 border-b-2 border-transparent focus:border-green-500">
-              Architecture
+              Animation
             </button>
             <div className="customLine"></div>
           </div>
