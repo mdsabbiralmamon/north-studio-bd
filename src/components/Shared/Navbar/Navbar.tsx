@@ -1,8 +1,8 @@
 "use client"
 
 import React, { useState, useEffect } from 'react';
-import logo from "@/app/images/logo.png";
-import logoWhite from "@/app/images/logo-white.png";
+import logo from "@/app/images/logo-full.png";
+import logoWhite from "@/app/images/logo-full-white.png";
 import Image from 'next/image';
 import './Navbar.css';
 
@@ -55,9 +55,9 @@ export default function Navbar() {
                 </div>
                 <div className='flex gap-2 justify-center items-center'>
                     {
-                        isScrolled ? <Image className='h-10 w-10' src={logo} alt="north studio logo" /> : <Image className='h-10 w-10' src={logoWhite} alt="north studio logo" />
+                        isScrolled ? <Image className='h-10 w-full' src={logo} alt="north studio logo" /> : <Image className='h-10 w-full' src={logoWhite} alt="north studio logo" />
                     }
-                    <p className={`text-3xl font-extrabold text-nowrap ${isScrolled ? 'text-northSecondaryBlack' : 'text-white'}`}>North Studio </p>
+                    {/* <p className={`text-3xl font-extrabold text-nowrap ${isScrolled ? 'text-northSecondaryBlack' : 'text-white'}`}>North Studio </p> */}
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
