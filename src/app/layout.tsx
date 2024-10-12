@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Questrial } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Shared/Navbar/Navbar";
 import Footer from "@/components/Shared/Footer/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const questrial = Questrial({
+  weight: "400",
+  style: "normal",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "North Studio | Architect Firm",
@@ -33,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="light">
-      <body className={inter.className}>
+      <body className={questrial.className}>
         <header>
           <Navbar />
         </header>
