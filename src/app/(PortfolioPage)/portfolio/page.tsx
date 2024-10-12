@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import bannerImg from '@/app/images/sliderImages/interior1.jpg';
 import Skeletons from '@/components/Shared/Skeletons/Skeletons';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Page = () => {
   const [projects, setProjects] = useState<{ _id: number; image: string; title: string; category: string }[]>([]);
@@ -27,8 +28,8 @@ const Page = () => {
     const timeoutId = setTimeout(() => controller.abort(), 10000); // Timeout after 10 seconds
 
     try {
-      // Simulate a 5-second delay before fetching
-      await new Promise((resolve) => setTimeout(resolve, 3000));
+      // Simulate delay before fetching
+      await new Promise((resolve) => setTimeout(resolve, 2000));
 
       // Fetch data from API
       const response = await fetch('/api/projects', { signal: controller.signal });
@@ -155,7 +156,7 @@ const Page = () => {
                   <div className="absolute bottom-0 left-0 w-full p-4 bg-red-700 text-white opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className=' flex justify-between items-center'>
                       <h2 className="font-bold">{project.title}</h2>
-                      <button className="mt-2 underline">View Details</button>
+                      <Link href={`/projects/${project._id}`} className="mt-2 underline">View Details</Link>
                     </div>
                   </div>
                 </div>
