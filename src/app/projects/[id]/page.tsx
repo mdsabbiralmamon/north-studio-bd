@@ -3,6 +3,7 @@
 import Banner from '@/components/Shared/Banner/Banner';
 import React, { useEffect, useState } from 'react';
 import errorProject from '@/app/images/error-project-loading.gif';
+import loadingProject from '@/app/images/loading-project.gif';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
 
@@ -49,7 +50,13 @@ const Page = () => {
 
     if (loading) {
         return (
-            <h2 className='skeleton rounded-none h-[545px] text-gray-400 flex justify-center items-center text-5xl font-extrabold'>Loading Project...</h2>
+            <div>
+                <div className='skeleton rounded-none h-[545px] text-gray-400 flex justify-center items-center'>
+                    <div className='flex justify-center items-center'>
+                        <h2 className='text-5xl text-center font-extrabold'>Loading Project</h2>
+                    </div>
+                </div>
+            </div>
         );
     }
 
@@ -58,8 +65,7 @@ const Page = () => {
             <div>
                 <div className='skeleton rounded-none h-[545px] text-gray-400 flex justify-center items-center'>
                     <div className='flex-col justify-center items-center'>
-                        <h2 className='text-5xl font-extrabold'>Failed To Load Project...</h2>
-                        <Image src={errorProject} alt="Error Loading Project" className='mx-auto h-20 w-20' />
+                        <h2 className='text-5xl text-center font-extrabold'>Failed To Load Project...</h2>
                     </div>
                 </div>
             </div>
@@ -67,7 +73,15 @@ const Page = () => {
     }
 
     if (!project) {
-        return <div>No project found.</div>; // Handle case where no project data is found
+        return (
+            <div>
+                <div className='skeleton rounded-none h-[545px] text-gray-400 flex justify-center items-center'>
+                    <div className='flex-col justify-center items-center'>
+                        <h2 className='text-5xl text-center font-extrabold'>No Project Found...</h2>
+                    </div>
+                </div>
+            </div>
+        )
     }
 
     return (
