@@ -8,7 +8,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const Page = () => {
-  const [projects, setProjects] = useState<{ _id: number; image: string; title: string; category: string }[]>([]);
+  const [projects, setProjects] = useState<{ _id: number; images: string[]; title: string; category: string }[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [reloading, setReloading] = useState(false);
@@ -151,9 +151,9 @@ const Page = () => {
             ) : (
               // Display fetched projects after data is loaded
               projects.map((project, index) => (
-                <div key={project._id} className={`relative group ${heightClasses[index]}`}>
-                  <Image src={project.image} alt={project.title} className="w-full h-full object-cover" width={800} height={800} />
-                  <div className="absolute bottom-0 left-0 w-full p-4 bg-red-700 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                <div key={project._id} className={`relative group rounded-lg shadow-lg ${heightClasses[index]}`}>
+                  <Image src={project.images[0]} alt={project.title} className="w-full h-full object-cover rounded-lg" width={800} height={800} />
+                  <div className="absolute rounded-b-lg bottom-0 left-0 w-full p-4 bg-red-700 text-white opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className=' flex justify-between items-center'>
                       <h2 className="font-bold">{project.title}</h2>
                       <Link href={`/projects/${project._id}`} className="mt-2 underline">View Details</Link>
