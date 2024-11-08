@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
                             Explore and connect with the beauty of architectural design and innovation at North Studio. Let us bring your vision to life with creativity and precision.
                         </p>
                         <div className="flex space-x-4 mt-4">
-                            <a href="#" className="text-blue-500">
+                            <a href="https://www.facebook.com/northstudio.bd" className="text-blue-500">
                                 <FaFacebookF />
                             </a>
                             <a href="#" className="text-blue-400">
@@ -26,9 +26,6 @@ const Footer: React.FC = () => {
                             </a>
                             <a href="#" className="text-pink-600">
                                 <FaInstagram />
-                            </a>
-                            <a href="#" className="text-red-500">
-                                <FaGooglePlusG />
                             </a>
                         </div>
                     </div>
