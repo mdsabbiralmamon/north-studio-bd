@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import logo from '@/app/images/logo-full.png';
-import { FaFacebookF, FaTwitter, FaInstagram, FaGooglePlusG } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaGooglePlusG, FaYoutube } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
     return (
@@ -21,10 +21,10 @@ const Footer: React.FC = () => {
                             <a href="https://www.facebook.com/northstudio.bd" className="text-blue-500">
                                 <FaFacebookF />
                             </a>
-                            <a href="#" className="text-blue-400">
-                                <FaTwitter />
+                            <a href="https://www.youtube.com/@NorthStudiobd" className="text-red-500">
+                                <FaYoutube />
                             </a>
-                            <a href="#" className="text-pink-600">
+                            <a href="https://www.instagram.com/northstudio.bd/" className="text-pink-600">
                                 <FaInstagram />
                             </a>
                         </div>
