@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
                             Need help or have a question? Find us at:
                         </p>
                         <p className=" mb-2">
-                            <span className="font-semibold">Address:</span> House: 1, Road: 6, Block: L, Bot-Tola, Aftabnagar, Dhaka 1213
+                            <span className="font-semibold">Address:</span> House No. 1, Road No. 6, Block L, Bot-Tola, Aftabnagar, Dhaka 1213, Bangladesh.
                         </p>
                         <p className=" mb-2">
                             <span className="font-semibold">Phone:</span> +880 1609 820 208
