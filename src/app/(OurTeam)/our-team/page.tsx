@@ -34,11 +34,10 @@ export default function page() {
                         Core Members
                     </h2>
                     <div className="grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-auto">
-                        <p className="text-xl font-semibold text-gray-700 hover:text-black">Ar. Sania Akter</p>
-                        <p className="text-xl font-semibold text-gray-700 hover:text-black">Ar. Rabaya Taposhi Irany</p>
+                        <p className="text-xl font-semibold text-gray-700 hover:text-black">Sania Akter</p>
+                        <p className="text-xl font-semibold text-gray-700 hover:text-black">Rabaya Taposhi Irany</p>
                         <p className="text-xl font-semibold text-gray-700 hover:text-black">Sadin Jerin Anamika</p>
                         <p className="text-xl font-semibold text-gray-700 hover:text-black">Rithim Noor</p>
-                        <p className="text-xl font-semibold text-gray-700 hover:text-black">Mahmudun Nabi Sourav</p>
                     </div>
 
                     {/* Away Members Section */}
@@ -48,8 +47,8 @@ export default function page() {
                     <div className="grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-auto">
                         <p className="text-xl font-semibold text-gray-700 hover:text-black">Orny Sumaiya</p>
                         <p className="text-xl font-semibold text-gray-700 hover:text-black">Fahmida Marium</p>
-                        <p className="text-xl font-semibold text-gray-700 hover:text-black">Md. Shourov</p>
                         <p className="text-xl font-semibold text-gray-700 hover:text-black">Tahrafi Sakib Faisal</p>
+                        <p className="text-xl font-semibold text-gray-700 hover:text-black">Mahmudun Nabi Sourav</p>
                     </div>
                 </div>
             </div>
