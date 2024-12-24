@@ -11,7 +11,7 @@ const questrial = Questrial({
 });
 
 export const metadata: Metadata = {
-  title: "North Studio | Architect Firm",
+  title: "North Studio | Architectural Firm",
   description: "North Studio is a leading architectural firm offering innovative design solutions for residential, commercial, and public spaces.",
   keywords: "architect, interior design, architecture firm, design, North Studio, residential design, commercial design, building solutions, architectural services",
   authors: [{ name: "North Studio", url: "https://northstudiobd.com" }],
